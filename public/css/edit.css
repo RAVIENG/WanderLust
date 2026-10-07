@@ -1,0 +1,360 @@
+.edit-listing-page {
+    min-height: calc(100vh - 70px);
+
+    padding: 55px 20px 80px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 56, 92, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(99, 102, 241, 0.07),
+            transparent 30%
+        ),
+        #f8f9fb;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.edit-listing-card {
+    width: 100%;
+    max-width: 850px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(0, 0, 0, 0.07);
+
+    border-radius: 24px;
+
+    padding: 45px 50px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.03);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.edit-listing-card h1 {
+    margin: 0 0 35px;
+
+    color: #18181b;
+
+    font-size: 34px;
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    letter-spacing: -0.7px;
+}
+
+
+.edit-listing-card form {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+
+.edit-listing-card .form-group {
+    margin-bottom: 23px;
+}
+
+.edit-listing-card .form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #27272a;
+
+    font-size: 14px;
+
+    font-weight: 650;
+}
+
+
+.edit-listing-card input,
+.edit-listing-card textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    border: 1.5px solid #e4e4e7;
+
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    color: #18181b;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.edit-listing-card textarea {
+    min-height: 145px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+.edit-listing-card input:focus,
+.edit-listing-card textarea:focus {
+    background: #ffffff;
+
+    border-color: #ff385c;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 56, 92, 0.09);
+
+    transform: translateY(-1px);
+}
+
+
+.edit-listing-card input::placeholder,
+.edit-listing-card textarea::placeholder {
+    color: #a1a1aa;
+}
+
+
+.edit-listing-card .form-group:nth-child(1) {
+    width: 100%;
+}
+
+
+/* Description */
+
+.edit-listing-card .form-group:nth-child(2) {
+    width: 100%;
+}
+
+
+/* Image */
+
+.edit-listing-card .form-group:nth-child(3) {
+    width: 100%;
+}
+
+
+/* Price */
+
+.edit-listing-card .form-group:nth-child(4) {
+    width: calc(50% - 10px);
+}
+
+
+/* Location */
+
+.edit-listing-card .form-group:nth-child(5) {
+    width: calc(50% - 10px);
+}
+
+
+/* Country */
+
+.edit-listing-card .form-group:nth-child(6) {
+    width: 100%;
+}
+
+
+.edit-listing-card .invalid-feedback {
+    margin-top: 7px;
+
+    color: #dc2626;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.update-btn {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 15px 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #ff385c,
+        #e61e4d
+    );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255, 56, 92, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* Hover */
+
+.update-btn:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+        0 12px 25px rgba(255, 56, 92, 0.28);
+}
+
+
+/* Click */
+
+.update-btn:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 12px rgba(255, 56, 92, 0.20);
+}
+
+
+.alert {
+    width: min(850px, calc(100% - 40px));
+
+    margin: 20px auto 0;
+
+    border: none;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Success */
+
+.alert-success {
+    background: #ecfdf3;
+
+    color: #166534;
+}
+
+
+/* Error */
+
+.alert-danger {
+    background: #fef2f2;
+
+    color: #991b1b;
+}
+
+
+@media (max-width: 700px) {
+
+    .edit-listing-page {
+        padding: 35px 15px 60px;
+    }
+
+    .edit-listing-card {
+        padding: 35px 28px;
+
+        border-radius: 20px;
+    }
+
+    .edit-listing-card h1 {
+        font-size: 29px;
+    }
+
+    .edit-listing-card .form-group:nth-child(4),
+    .edit-listing-card .form-group:nth-child(5) {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .edit-listing-page {
+        padding: 20px 10px 45px;
+    }
+
+    .edit-listing-card {
+        padding: 28px 20px;
+
+        border-radius: 17px;
+    }
+
+    .edit-listing-card h1 {
+        margin-bottom: 28px;
+
+        font-size: 25px;
+
+        letter-spacing: -0.4px;
+    }
+
+    .edit-listing-card .form-group {
+        margin-bottom: 19px;
+    }
+
+    .edit-listing-card input,
+    .edit-listing-card textarea {
+        padding: 13px 14px;
+
+        font-size: 14px;
+    }
+
+    .edit-listing-card textarea {
+        min-height: 120px;
+    }
+
+    .update-btn {
+        padding: 14px;
+    }
+
+    .alert {
+        width: calc(100% - 20px);
+    }
+}
+
+.image-style-form img{
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}

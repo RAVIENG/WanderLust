@@ -1,0 +1,111 @@
+<% layout("layouts/boilerPlate") -%>
+<%- include("../includes/flash.ejs") %>
+
+<link rel="stylesheet" href="/css/index.css">
+<div class="filters">
+
+    <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+        <span>Trending</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-house"></i>
+        <span>Homes</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-hotel"></i>
+        <span>Hotels</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-umbrella-beach"></i>
+        <span>Beach</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-mountain"></i>
+        <span>Mountains</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-tree"></i>
+        <span>Nature</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-campground"></i>
+        <span>Camping</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-person-hiking"></i>
+        <span>Adventure</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-landmark"></i>
+        <span>Historical</span>
+    </div>
+
+    <div class="filter">
+        <i class="fa-solid fa-city"></i>
+        <span>Cities</span>
+    </div>
+
+    <div class="tax-toggle">
+      <div class="form-check-reverse form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+      <label class="form-check-label" for="switchCheckDefault">Display Total After Taxes</label>
+      </div>
+  </div>
+
+</div>
+
+<main class="listings-page">
+  <h1>Explore Listings</h1>
+
+  <div class="listing-grid">
+    <% for (let list of allListing) { %>
+      <article class="listing-card">
+        <a href="/listings/<%= list._id %>">
+          <img src="<%= list.image.url %>" alt="<%= list.title %>">
+
+          <div class="card-body">
+            <h2 class="listing-title"><%= list.title %></h2>
+            <p class="listing-price">₹<%= (list.price || 0).toLocaleString("en-IN") %> / night</p>
+            <i class="tax-info">+18% GST</i>
+            <p class="listing-location"><%= list.location %>, <%= list.country %></p>
+          </div>
+        </a>
+      </article>
+    <% } %>
+  </div>
+</main>
+
+  <script>
+  let taxSwitch = document.getElementById("switchCheckDefault");
+
+  taxSwitch.addEventListener("click", () => {
+    let taxInfo = document.getElementsByClassName("tax-info");
+    for(info of taxInfo){
+      if(info.style.display != "inline"){
+        info.style.display = "inline";
+      }else{
+        info.style.display = "none"; 
+      }
+      
+    }
+  });
+</script>
+
+
+<!-- <button id="createBtn">Create new</button> -->
+<!-- <script>
+  document.querySelector("#createBtn").addEventListener("click", () => {
+    window.location.href = "/listings/new";
+  });
+</script> -->
+
+
