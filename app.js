@@ -40,7 +40,6 @@ const listings = require('./routes/listings.js');
 const reviews = require('./routes/reviews.js');
 const userRouter = require('./routes/user.js');
 
-
 main()
     .then(() => {
         console.log("connect to DB");
