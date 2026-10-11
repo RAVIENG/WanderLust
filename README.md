@@ -23,14 +23,6 @@ The application includes authentication, authorization, cloud-based image upload
 - **Data Validation:** Validate input data using Joi.
 - **Responsive UI:** Build responsive pages with Bootstrap 5.
 
-## 📸 Screenshots
-
-### Explore Listings
-
-Add your homepage screenshot to the repository at `screenshots/homepage.png` to display it here.
-
-![WanderLust Explore Listings](screenshots/homepage.png)
-
 ## 🛠️ Tech Stack
 
 ### 🎨 Frontend
